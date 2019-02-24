@@ -19,10 +19,10 @@ namespace hw2002
         private static readonly IComparer<Person> heightComparer;
         private static readonly IComparer<Person> nameComparer;
 
-        public static IComparer<Person> IDComparer { get; }
-        public static IComparer<Person> AgeComparer { get; }
-        public static IComparer<Person> HeightComparer { get; }
-        public static IComparer<Person> NameComparer { get; }
+        public static IComparer<Person> IDComparer { get { return idComparer; } }
+        public static IComparer<Person> AgeComparer { get { return ageComparer; } }
+        public static IComparer<Person> HeightComparer { get { return ageComparer; } }
+        public static IComparer<Person> NameComparer { get { return nameComparer; } }
 
         private static IComparer<Person> DefaultComparer;
 
@@ -46,16 +46,13 @@ namespace hw2002
 
         public static void ModifyDefaultComparer(string any)
         {
-            if(any == "name")
-            {
-                new PersonCompareByName();
-            }
+           
         }
 
 
         //public static IComparer<Person> GetDefaultComparer()
         //{
-             
+            
         //}
 
         public override string ToString()

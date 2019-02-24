@@ -10,17 +10,7 @@ namespace hw2002
     {
         public int Compare(Person x, Person y)
         {
-           if(x.Name[0] > y.Name[0])
-           {
-               return 1;
-           }
-
-           if (x.Name[0] == y.Name[0])
-           {
-               return 0;
-           }
-
-            return -1;
+            return x.Name.CompareTo(y.Name);
         }
     }
 }

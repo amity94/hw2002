@@ -14,7 +14,7 @@ namespace hw2002
             {
                 return 1;
             }
-            else if (x.Height == y.Height)
+            if (x.Height == y.Height)
             {
                 return 0;
             }

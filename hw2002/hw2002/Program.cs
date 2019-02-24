@@ -11,7 +11,6 @@ namespace hw2002
         static void Main(string[] args)
         {
             int[] arr = {1,4,7,43,7,32};
-
             Array.Sort(arr);
             PrintArray(arr);
 
@@ -35,23 +34,26 @@ namespace hw2002
 
             Console.WriteLine();
 
-                      
+            Console.WriteLine("Sort by Id");
+            Array.Sort(persons, new PersonCompareById());
+            PrintPersonArray(persons);
 
-            //Console.WriteLine("Sort by Id");
-            //Array.Sort(persons, new PersonCompareById());
-            //PrintPersonArray(persons);
+            Console.WriteLine("Sort by Age");
+            Array.Sort(persons, new PersonCompareByAge());
+            PrintPersonArray(persons);
 
-            //Console.WriteLine("Sort by Age");
-            //Array.Sort(persons, new PersonCompareByAge());
-            //PrintPersonArray(persons);
+            Console.WriteLine("Sort by Height");
+            Array.Sort(persons, new PersonCompareByHeight());
+            PrintPersonArray(persons);
 
-            //Console.WriteLine("Sort by Height");
-            //Array.Sort(persons, new PersonCompareByHeight());
-            //PrintPersonArray(persons);
+            Console.WriteLine("Sort by Name");
+            Array.Sort(persons, new PersonCompareByName());
+            PrintPersonArray(persons);
+            Console.WriteLine();
 
-            //Console.WriteLine("Sort by Name");
-            //Array.Sort(persons, new PersonCompareByName());
-            //PrintPersonArray(persons);
+            Console.WriteLine("by age");
+            Array.Sort(persons, Person.AgeComparer);
+            PrintPersonArray(persons);
         }
 
         static void PrintPersonArray(Person[] anyperson)
